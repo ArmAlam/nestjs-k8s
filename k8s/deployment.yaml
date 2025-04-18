@@ -17,3 +17,6 @@ spec:
           image: armanalam/nestjs-k8s
           ports:
             - containerPort: 3000
+          envFrom: #reference to the configMap
+            - configMapRef:
+                name: nestjs-k8s-env
