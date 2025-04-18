@@ -30,4 +30,16 @@ npm install
 npm run start
 
 The application should now be running on http://localhost:3000.
+```
 
+
+### Run in k8s cluster
+
+To run in K8s cluster
+
+
+```bash
+kubectl create -f deployment.yaml
+kubectl create -f service.yaml
+
+minikube service nestjs-k8s --url #to get the url
