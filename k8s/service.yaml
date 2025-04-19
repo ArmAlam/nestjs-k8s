@@ -7,5 +7,7 @@ spec:
     app: nestjs-k8s
   ports:
     - protocol: TCP
-      port: 3000
-  type: NodePort
+      port: 3000 #port for the service
+      targetPort: 3000 #port for the container
+      nodePort: 3000 # This is the port on the node that will be exposed
+  type: NodePort #can be LoadBalancer or ClusterIP (default)
