@@ -10,4 +10,4 @@ spec:
     - protocol: TCP
       port: 3000 #port for the service
       targetPort: 3000 #port for the container
-      nodePort: 30080
+      nodePort: 30080 # default range is between 30000 to 32767.
